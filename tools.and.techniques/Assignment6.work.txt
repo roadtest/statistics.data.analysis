@@ -1,0 +1,12 @@
+In [1]: from pandas.io.data import get_data_yahoo
+ 
+In [2]: import matplotlib.pyplot as plt
+ 
+In [3]: data = get_data_yahoo("FITB", start = '2012-01-01', end = '2012-12-31')[['Close', 'Volume']]
+ 
+In [4]: data.plot(subplots = True, figsize = (8, 8));
+ 
+In [5]: plt.legend(loc = 'best')
+Out[5]: <matplotlib.legend.Legend at 0xb68ce2c>
+ 
+In [6]: plt.show()

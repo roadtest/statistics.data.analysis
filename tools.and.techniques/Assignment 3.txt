@@ -1,0 +1,13 @@
+Assignment 3:                 
+1. 38 engineer alike  position
+2. SELECT  count(*) from sample_07 where UPPER(description) like '%ENGINEER%';
+3. Format data with google  Refine , make the format like
+
+51-9071, Jewelers and precious stone and metal workers, 27160, 34010
+
+Pig -x local
+A = load 'sample_07' as (a,b,c);
+B = filter A by ( $1 matches '.*engineer.*')
+Dump B
+
+

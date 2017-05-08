@@ -1,0 +1,19 @@
+X = df[['Tobacco','Eins']]
+Y = df.Alcohol
+result = sm.OLS( Y, X ).fit()
+result.summary()
+
+pandas:
+complaints['Complaint Type'].value_counts()
+complaint_counts[:10].plot(kind='bar')
+
+
+
+The reset_index() is a pandas DataFrame method that will transfer index values into the DataFrame as columns. The default setting for the parameter is drop=False (which will keep the index values as columns).
+
+All you have to do add .reset_index(inplace=True) after the name of the DataFrame:
+
+df.reset_index(inplace=True)  
+
+I should read in the excel file without header, then add header with columns function of DataFrame
+
